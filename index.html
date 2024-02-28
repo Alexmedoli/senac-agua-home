@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./images/logo.png" rel="shortcut icon" type="image/x-icon">
+    <!--inserindo imagem na "aba" da página-->
     <title>Água Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
@@ -14,37 +16,44 @@
         <h1>Água Home</h1>
 
         <div> 
+            <a href="cadastro.html">
             <button>Cadastrar</button>
+            </a>
+            <a href="cadastro.html">
             <button>Login</button>
+            </a>
         </div>
     </header>
     <section>
         <div class="container">
             <img src="images/notificacao.jpg" alt="notificacao">
             <p>RECEBA NOTIFICACÕES EM TEMPO REAL NO  SEU SMARTPHONE QUANDO HOUVER PROBLEMAS NO ABASTECIMENTO DE ÁGUA.</p>
-            <button>Clique Aqui</button>
+            <a href="cadastro.html">
+                <button>Clique Aqui</button>
+            </a>
         </div>
         <div class="container">
             <img src="images/reportando.jpg" alt="reportar">
             <p>ESTÁ SEM ÁGUA EM SUA RESIDENCIA E OU EM SEU BAIRRO? VIU ALGUM VAZAMENTO NA REDE ? POR FAVOR, AVISE-NOS.</p>
-            <button>Clique Aqui</button>
+            <a href="reportar.html">
+                <button>Clique Aqui</button>
+            </a>
         </div>
     </section>
 
     <footer>
-        <img class="logo" src="images/logo2.png" alt="logo">
-        <p>Avenida Paulista - Bela Vista, São Paulo - SP<br>
-                     aguahome@aguahome.com.br<br>
-                        (11) 91111-1111</p>
-        <ul class="social-links">
-            <li>
-                <a href="#"><i class="fab fa-instagram"></i>instagram</a>
-            </li>
-            <li>
-                <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
-            </li>
-            
-        </ul>
+        <div class="img-footer">
+            <img class="logo" src="images/logo2.png" alt="logo">
+        </div>
+        <div class="texto-footer">
+            <p>Avenida Paulista - Bela Vista, São Paulo - SP</p>
+            <p>aguahome@aguahome.com.br</p>
+            <p>(11) 91111-1111</p>
+        </div>
+        <div class="redes-footer">
+           <a href="#"><img src="./images/facebook.png" alt="Imagem do facebook"></a>
+           <a href="#"><img src="./images/instagram.png" alt="Imagem do instagram"></a>
+        </div>
     </footer>
     
 </body>
