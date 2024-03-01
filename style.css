@@ -38,7 +38,7 @@ header button {
     width: 140px;
     left: 1185px;
     top: 59px;
-cursor: pointer;
+    cursor: pointer;
 }
 
 section img {
@@ -56,7 +56,6 @@ section img {
     margin: 80px;
     border-radius: 20px;
 }
-
 
 .container button {
     background-color: rgba(43, 100, 227, 1);
@@ -79,12 +78,10 @@ section img {
     transform: translate(-50%, -50%);
 }
 
-
 .logo {
     height: 100px;
     height: 100px;
 }
-
 
 .container-cadastro {
     height: 500px;
@@ -124,6 +121,10 @@ section img {
 .input-recebimento{
     font-family: "Source Sans 3", sans-serif;
     font-size: 16px;
+}
+
+input{
+    padding: 0.5rem;
 }
 
 .form-control{
@@ -170,6 +171,30 @@ footer {
 .redes-footer img{
     height: 3.5rem;
     margin: 1rem;
+}
+
+.position-recuperarsenha{
+    display: flex;
+    align-items: end;
+}
+
+.button-recuperarsenha{
+    display: block;
+    text-align: center;
+    height: 20px;
+    width: 150px;
+    border-radius: 10px;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 15px;
+    background-color: rgba(43, 100, 227, 1);
+    color: white;
+    margin-bottom: 8rem;
+}
+
+.form-titulo-login{
+    margin-bottom: 5rem;
+    display: block;
+    text-align: center;
 }
 
 @media only screen and (max-width:600px) {
@@ -254,26 +279,4 @@ section {
     width: 350px;
 }
 
-}
-  
-    
-  
-  
-    
-  
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+}  
