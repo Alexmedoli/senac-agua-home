@@ -236,6 +236,23 @@ section {
     width: 70px;
 }
 
+.header-mob{
+    display: none;
+}
+
+.container-cadastro{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-mob{
+    display: none;
+}
+
+.container-cadastro {
+    height: 500px;
+    width: 350px;
+}
 
 }
   
