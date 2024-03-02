@@ -197,6 +197,34 @@ footer {
     text-align: center;
 }
 
+.container-reportar {
+    height: 650px;
+    width: 400px;
+    padding: 2rem;
+    background-color: white;
+    border: solid rgba(0, 74, 215, 1) 1px;
+    border-radius: 30px;
+    margin: auto;
+}
+
+#uploadContainer {
+    width: 250px;
+    height: 150px;
+    border: 1px solid black;
+    justify-content: center; 
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    
+
+}
+
+#uploadContainer img {
+    cursor: pointer;
+}
+
 @media only screen and (max-width:600px) {
 
 header {
@@ -275,6 +303,11 @@ section {
 }
 
 .container-cadastro {
+    height: 500px;
+    width: 350px;
+}
+
+.container-reportar {
     height: 500px;
     width: 350px;
 }
