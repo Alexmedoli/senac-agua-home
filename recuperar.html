@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <!--Link para a página CSS-->
     <link href="./images/logo.png" rel="shortcut icon" type="image/x-icon">
     <!--inserindo imagem na "aba" da página-->
     <title>Água Home</title>
-    <!--Nome da "aba" da página-->
 </head>
 <body>
-
     <div class="header-mob">
         <header>
             <div>
@@ -25,32 +24,37 @@
             </div>
         </header>
     </div>
-    <div class="container-cadastro">
+
+    <div class="container-recu">
         <div class="form">
             <form action="#">
                 <div class="form-titulo-login">
-                    <h1>LOGIN</h1>
+                    <h1>RECUPERAR DE SENHA</h1>
                 </div>
                 
                 <div class="input-group">
                     <div class="input-box">
-                        <label for="celular">CELULAR</label><br>
-                        <input id="celular" type="tel" name="celular" placeholder="   (_ _) _ _ _ _ _ - _ _ _ _ " required>
+                        <label for="codigo">SENHA*</label><br>
+                        <input id="codigo" type="tel" name="celular">
                     </div>
+
                     <div class="input-box">
-                        <label for="senha">SENHA</label><br>
-                        <input id="senha" type="password" name="senha" required>
+                        <label for="codigo">NOVA SENHA*</label><br>
+                        <input id="codigo" type="tel" name="celular">
                     </div>
-                    <div class="position-recuperarsenha">
-                        <a class="button-recuperarsenha" href="recsenha.html">RECUPERAR SENHA</a>
-                    </div>  
-                    <div class="button-enviar">
-                        <button class="button-enviar">REALIZAR LOGIN</button>   
-                    </div>  
+                    
+                   
                 </div>
             </form>
+            <div class="button-enviar">
+                <button class="button-enviar">SALVAR</button>   
+            </div> 
         </div>
     </div>
+
+
+
+
 
     <div class="footer-mob">
         <footer>
@@ -68,5 +72,6 @@
             </div>
         </footer>
     </div>
+    
 </body>
 </html>

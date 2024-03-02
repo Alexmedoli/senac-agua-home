@@ -221,6 +221,35 @@ footer {
 
 }
 
+.container-recu {
+    height: 650px;
+    width: 400px;
+    padding: 2.5rem;
+    background-color: white;
+    border: solid rgba(0, 74, 215, 1) 1px;
+    border-radius: 30px;
+    margin: auto;
+    
+
+}
+
+
+
+.container-recu .input-group {
+    margin: 50px;
+}
+
+.container-recu .button-enviar {
+    width: 300px;
+    display: block;
+    cursor: pointer;
+    
+}
+
+.position-recusenha {
+    margin: 50px;
+}
+
 #uploadContainer img {
     cursor: pointer;
 }

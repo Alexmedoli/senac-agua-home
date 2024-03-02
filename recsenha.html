@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <!--Link para a página CSS-->
-    <link href="./images/logo.png" rel="shortcut icon" type="image/x-icon">
-    <!--inserindo imagem na "aba" da página-->
+     <!--Link para a página CSS-->
+     <link href="./images/logo.png" rel="shortcut icon" type="image/x-icon">
+     <!--inserindo imagem na "aba" da página-->
+     <link rel="stylesheet" href="style.css">
     <title>Água Home</title>
-    <!--Nome da "aba" da página-->
 </head>
-<body>
-
+<body> 
     <div class="header-mob">
         <header>
             <div>
@@ -25,32 +24,33 @@
             </div>
         </header>
     </div>
-    <div class="container-cadastro">
+
+    <div class="container-recu">
         <div class="form">
             <form action="#">
                 <div class="form-titulo-login">
-                    <h1>LOGIN</h1>
+                    <h1>RECUPERAÇÃO DE SENHA</h1>
                 </div>
+
+                <p>Você receberá um código de seis digitos no número de telefone informado, insira-o no espaço a seguir.</p>
                 
                 <div class="input-group">
                     <div class="input-box">
-                        <label for="celular">CELULAR</label><br>
-                        <input id="celular" type="tel" name="celular" placeholder="   (_ _) _ _ _ _ _ - _ _ _ _ " required>
+                        <label for="codigo">CODIGO*</label><br>
+                        <input id="codigo" type="tel" name="celular" placeholder="    _    _    _    _    _    _    " required>
                     </div>
-                    <div class="input-box">
-                        <label for="senha">SENHA</label><br>
-                        <input id="senha" type="password" name="senha" required>
-                    </div>
-                    <div class="position-recuperarsenha">
-                        <a class="button-recuperarsenha" href="recsenha.html">RECUPERAR SENHA</a>
-                    </div>  
-                    <div class="button-enviar">
-                        <button class="button-enviar">REALIZAR LOGIN</button>   
+                    
+                    <div class="position-recusenha">
+                        <a class="button-recuperarsenha" href="recuperar.html">RECUPERAR SENHA</a>
                     </div>  
                 </div>
             </form>
         </div>
     </div>
+
+
+
+
 
     <div class="footer-mob">
         <footer>
@@ -68,5 +68,12 @@
             </div>
         </footer>
     </div>
+    
+    
+    
+    
+    
+ 
+    
 </body>
 </html>
