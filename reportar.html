@@ -32,35 +32,33 @@
                     <h1>Gostaria de Reportar algum problema no fornecimento de Água ?</h1>
                 </div>
 
-                <div class="input-box">
-                    <label for="cep">CEP</label><br>
-                    <input id="cep" type="text" name="cep" maxlength="9" onkeyup="handleZipCode(event)" placeholder="   _ _ _ _ _ - _ _ _" required>
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="cep">CEP</label><br>
+                        <input id="cep" type="text" name="cep" maxlength="9" onkeyup="handleZipCode(event)" placeholder="   _ _ _ _ _ - _ _ _" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="rua">Rua</label><br>
+                        <input id="rua" type="text" name="rua" maxlength="20">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="numero">Número</label><br>
+                        <input id="numero" type="text" name="rua" maxlength="9">
+                    </div>
+
+                    <div id="uploadContainer">
+                        <label for="fileUploader">
+                            <img class="upload-img" src="images/camera.png" alt="camera" id="cameraIcon">
+                        </label>
+                        <input type="file" id="fileUploader" accept="image/*" style="display: none;">
+                        <img src="" alt="Preview" id="imagePreview" height="100" width="100" style="display: none;">
+                    </div>
+                    <div class="button-enviar">
+                        <button class="button-enviar">ENVIAR</button>   
+                    </div>  
                 </div>
-
-                <div class="input-box">
-                    <label for="rua">Rua</label><br>
-                    <input id="rua" type="text" name="rua" maxlength="20">
-                </div>
-
-                <div class="input-box">
-                    <label for="numero">Número</label><br>
-                    <input id="numero" type="text" name="rua" maxlength="9">
-                </div>
-
-                <div id="uploadContainer">
-                    <label for="fileUploader">
-                        <img src="images/camera.png" alt="camera" id="cameraIcon">
-                    </label>
-                    <input type="file" id="fileUploader" accept="image/*" style="display: none;">
-                    <img src="" alt="Preview" id="imagePreview" height="100" width="100" style="display: none;">
-                </div>
-
-
-            
-
-                <div class="button-enviar">
-                    <button class="button-enviar">ENVIAR</button>   
-                </div>  
             </div>
         </form>
     </div>
