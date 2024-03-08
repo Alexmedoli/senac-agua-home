@@ -14,3 +14,18 @@ document.getElementById('fileUplpader').addEventListener('change', function(even
     reader.readAsDataURL(file);
 });
 
+function openTab(tabIndex) {
+    var tabs = document.querySelectorAll('.tab');
+    tabs.forEach(function(tab) {
+      tab.classList.remove('active');
+    });
+  
+    var tabToShow = document.getElementById('tab' + tabIndex);
+    tabToShow.classList.add('active');
+  }
+
+  function toggleNavbar() {
+    var navbarItems = document.getElementById("navbarItems");
+    navbarItems.style.display === "none" ? navbarItems.style.display = "flex" : navbarItems.style.display = "none";
+  }
+
