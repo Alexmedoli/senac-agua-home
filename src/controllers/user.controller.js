@@ -1,4 +1,5 @@
 const User = require('../models/user.model');
+const bcrypt = require('bcrypt');
 
 /*
 ler todos os usuários
@@ -32,8 +33,11 @@ Criar Usuário
 */
 const postUsuario = async (req,res) =>{
     try {
+        const hashSenha = await bcrypt.hash(req.body.senha, 10)
+        req.body.senha = hashSenha;
         const user = await User.create(req.body);
-        res.status(200).json(user);
+        res.redirect('../../public/login.html')
+
     } catch (error) {
         res.status(500).json({message:error.message});
     }
@@ -45,6 +49,7 @@ Atualizar usuário
 const putUsuario = async (req, res) => {
     try {
         const { id } = req.params;
+
         const user = await User.findByIdAndUpdate(id, req.body);
         if (!user) {
             return response.status(404).json({message:"Usuário não encontrado"});
@@ -59,6 +64,28 @@ const putUsuario = async (req, res) => {
     
     }
 }
+/*
+Logar usuário
+*/
+const login = async (req, res) => {
+    try {
+        const user = await User.findOne({nome: req.body.nome});
+        if (!user) {
+            return res.status(400).send('Usuário não encontrado');
+        }
+        
+        if (await bcrypt.compare(req.body.senha, user.senha)){
+            res.redirect('../../public/usuario-notificacao.html')
+
+        } else{
+            res.send('Usuário ou senha incorretos, tente novamente!')
+        }
+    } catch (error) {
+        res.status(500).json({message:error.message});
+    }
+}
+
+
 
 /*
 Deletar usuário por id
@@ -82,6 +109,7 @@ const deleteUsuario = async (req, res) => {
 module.exports = {
     getUsuarios, 
     getUsuario, 
+    login,
     postUsuario, 
     putUsuario, 
     deleteUsuario

@@ -13,16 +13,21 @@ const userSchema = mongoose.Schema(
             default: 0,
         },
 
+        senha:{
+            type: String,
+            required: true,
+        },
+
         endereço: {
             type: {
                 cep: {
                     type: String,
-                    required: true,
+                    required: false,
                     default: 0,
                 },
                 rua: {
                     type: String,
-                    required: true,
+                    required: false,
                 },
                 numeroResidencial: {
                     type: Number,
@@ -30,7 +35,7 @@ const userSchema = mongoose.Schema(
                     default: 0,
                 },
             },
-            required: true,
+            required: false,
         },
 
         formaRecebimento: {

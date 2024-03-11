@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!--Link para a página CSS-->
+    <link href="./images/logo.png" rel="shortcut icon" type="image/x-icon">
+    <!--inserindo imagem na "aba" da página-->
+    <title>Água Home</title>
+    <!--Nome da "aba" da página-->
+</head>
+<body>
+
+    <div class="header-mob">
+        <header>
+            <div>
+                <img class="logo" src="images/logo.png" alt="logo">
+            </div>
+            <div>
+                <h1>Água Home</h1>
+            </div>
+            <div class="img-home"> 
+                <a href="../index.html"><img src="./images/home.png" alt="Imagem que retorna para a página home"></a>
+            </div>
+        </header>
+    </div>
+    <div class="container-cadastro">
+        <div class="form" >
+            <form id='loginForm' action="/api/usuarios/login" method="post">
+                <div class="form-titulo-login">
+                    <h1>LOGIN</h1>
+                </div>
+                
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="nomecompleto">NOME</label><br>
+                        <input id="nomecompleto" type="text" name="nome" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="senha">SENHA</label><br>
+                        <input id="senha" type="password" name="senha" required>
+                    </div>
+                    <div class="position-recuperarsenha">
+                        <a class="button-recuperarsenha" href="recuperar-senha.html">RECUPERAR SENHA</a>
+                    </div>  
+                    <div class="button-enviar">
+                        <button class="button-enviar" type="submit">REALIZAR LOGIN</button>   
+                    </div>  
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-mob">
+        <footer>
+            <div class="img-footer">
+                <img class="logo" src="images/logo2.png" alt="logo">
+            </div>
+            <div class="texto-footer">
+                <p>Avenida Paulista - Bela Vista, São Paulo - SP</p>
+                <p>aguahome@aguahome.com.br</p>
+                <p>(11) 91111-1111</p>
+            </div>
+            <div class="redes-footer">
+            <a href="#"><img src="./images/facebook.png" alt="Imagem do facebook"></a>
+            <a href="#"><img src="./images/instagram.png" alt="Imagem do instagram"></a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
