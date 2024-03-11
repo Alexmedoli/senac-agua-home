@@ -21,31 +21,31 @@
                 <h1>Água Home</h1>
             </div>
             <div class="img-home"> 
-                <a href="index.html"><img src="./images/home.png" alt="Imagem que retorna para a página home"></a>
+                <a href="../index.html"><img src="./images/home.png" alt="Imagem que retorna para a página home"></a>
             </div>
         </header>
     </div>
     <div class="container-cadastro">
-        <div class="form">
-            <form action="#">
+        <div class="form" >
+            <form id='loginForm' action="/api/usuarios/login" method="post">
                 <div class="form-titulo-login">
                     <h1>LOGIN</h1>
                 </div>
                 
                 <div class="input-group">
                     <div class="input-box">
-                        <label for="celular">CELULAR</label><br>
-                        <input id="celular" type="tel" name="celular" placeholder="   (_ _) _ _ _ _ _ - _ _ _ _ " required>
+                        <label for="nomecompleto">NOME</label><br>
+                        <input id="nomecompleto" type="text" name="nome" required>
                     </div>
                     <div class="input-box">
                         <label for="senha">SENHA</label><br>
                         <input id="senha" type="password" name="senha" required>
                     </div>
                     <div class="position-recuperarsenha">
-                        <a class="button-recuperarsenha" href="recsenha.html">RECUPERAR SENHA</a>
+                        <a class="button-recuperarsenha" href="recuperar-senha.html">RECUPERAR SENHA</a>
                     </div>  
                     <div class="button-enviar">
-                        <button class="button-enviar">REALIZAR LOGIN</button>   
+                        <button class="button-enviar" type="submit">REALIZAR LOGIN</button>   
                     </div>  
                 </div>
             </form>

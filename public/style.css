@@ -289,6 +289,104 @@ footer {
     cursor: pointer;
 }
 
+.container-usuario {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 900px;
+    height: 1000px;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.caixa-mensagem {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.caixa-escolha{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 800px;
+    border-radius: 30px;
+}
+
+.Bem-vindo {
+	padding: 20px;
+	text-align: center;
+	border-radius: 30px;
+	background-color: rgba(43, 100, 227, 1);
+    color: #ffff;
+	height: 80px;
+	width: 250px;
+    font-size: 9px;
+  }
+
+  .caixa-escolha-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    width: 700px;
+
+  }
+
+  .caixa-escolha-button a{
+    display: block;
+    text-align: center;
+  }
+
+  .escolha-button-not{
+    display: flex;
+    background-color: rgba(43, 100, 227, 1);
+    color: white;
+    border-radius: 15px;
+    height: 50px;
+    width: 120px;
+    cursor: pointer;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .escolha-button-not1{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-radius: 15px;
+    height: 50px;
+    width: 120px;
+    cursor: pointer;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+
+.deletar-button{
+    display: flex;
+    background-color: #FA4C4C;
+    color: rgb(0, 0, 0);
+    border-radius: 15px;
+    height: 50px;
+    width: 120px;
+    cursor: pointer;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
+  .caixa-escolha-button button{
+    display: flex;
+    text-decoration: none;
+    font-size: 15px;
+  }
+
+
 @media only screen and (max-width:1100px) {
 
 section {
@@ -319,9 +417,53 @@ section img {
     border-radius: 20px;
 }
 
+<<<<<<< HEAD:style.css
 .container-bt button{
     margin-left: 33%;
 }
+=======
+.container-usuario {
+    width: 600px;
+    height: 1200px;
+}
+
+.caixa-escolha{
+    width: 600px;
+}
+    
+.Bem-vindo {
+	padding: 9px;
+	height: 50px;
+	width: 150px;
+    font-size: 7px;
+  }
+
+  .caixa-escolha-button{
+    padding: 20px;
+    width: 450px;
+  }
+
+  .caixa-escolha-button button{
+
+    font-size: 10px;
+  }
+
+  .escolha-button-not{
+    height: 40px;
+    width: 90px;
+  }
+
+  .escolha-button-not1{
+    height: 40px;
+    width: 90px;
+  }
+
+.deletar-button{
+    height: 40px;
+    width: 90px;
+}
+
+>>>>>>> e4f4918b40c05710b43847868f660ffc7f08e613:public/style.css
     
 }
 
@@ -403,4 +545,46 @@ header button {
     width: 240px;
     height: 90px;
 }
+
+.container-usuario {
+    width: 450px;
+    height: 1400px;
+}
+
+.caixa-escolha{
+    width: 450px;
+}
+    
+.Bem-vindo {
+	padding: 9px;
+	height: 50px;
+	width: 100px;
+    font-size: 5.5px;
+  }
+
+  .caixa-escolha-button{
+    padding: 20px;
+    width: 400px;
+  }
+
+  .caixa-escolha-button button{
+
+    font-size: 8px;
+  }
+
+  .escolha-button-not{
+    height: 30px;
+    width: 80px;
+  }
+
+  .escolha-button-not1{
+    height: 30px;
+    width: 80px;
+  }
+
+.deletar-button{
+    height: 30px;
+    width: 80px;
+}
+
 }  

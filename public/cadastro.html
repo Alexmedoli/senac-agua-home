@@ -21,13 +21,13 @@
                 <h1>Água Home</h1>
             </div>
             <div class="img-home"> 
-                <a href="index.html"><img src="./images/home.png" alt="Imagem que retorna para a página home"></a>
+                <a href="../index.html"><img src="./images/home.png" alt="Imagem que retorna para a página home"></a>
             </div>
         </header>
     </div>
     <div class="container-cadastro">
         <div class="form">
-            <form action="#">
+            <form id="cadastroForm" action="/api/usuarios/cadastro" method="post">
                 <div class="form-titulo">
                     <h1>CADASTRE-SE</h1>
                 </div>
@@ -35,15 +35,15 @@
                 <div class="input-group">
                     <div class="input-box">
                         <label for="nomecompleto">NOME COMPLETO*</label><br>
-                        <input id="nomecompleto" type="text" name="nomecompleto" required>
+                        <input id="nome" type="text" name="nome" required>
                     </div>
                     <div class="input-box">
                         <label for="cep">CEP*</label><br>
-                        <input id="cep" type="text" name="cep" maxlength="9" onkeyup="handleZipCode(event)" placeholder="   _ _ _ _ _ - _ _ _" required>
+                        <input id="cep" type="text" name="endereço.cep" maxlength="9" onkeyup="handleZipCode(event)" placeholder="   _ _ _ _ _ - _ _ _" required>
                     </div>
                     <div class="input-box">
                         <label for="celular">CELULAR*</label><br>
-                        <input id="celular" type="tel" name="celular" placeholder="   (_ _) _ _ _ _ _ - _ _ _ _ " required>
+                        <input id="numeroTelefone" type="tel" name="numeroTelefone" maxlength="14" placeholder="   (_ _) _ _ _ _ _ - _ _ _ _ " required>
                     </div>
                     <div class="input-box">
                         <label for="senha">SENHA*</label><br>
@@ -51,14 +51,14 @@
                     </div>
                     <div class="input-recebimento">
                         <label for="sel1">FORMA DE RECEBIMENTO*</label><br>
-                        <select class="form-control" id="sel1" >                     
-                            <option type="submit" value="whatsapp">WHATSAPP</option>
-                            <option type="submit" value="mensagemp">MENSAGEM</option>
-                            <option type="submit" value="telegram">TELEGRAM</option>
+                        <select class="form-control" id="sel1" name="formaRecebimento" >                     
+                            <option value="whatsapp">WHATSAPP</option>
+                            <option value="mensagem">MENSAGEM</option>
+                            <option value="telegram">TELEGRAM</option>
                         </select>
                     </div>
                     <div class="button-enviar">
-                        <button class="button-enviar">ENVIAR</button>   
+                        <button class="button-enviar" type="submit">ENVIAR</button>   
                     </div>  
                 </div>
             </form>
