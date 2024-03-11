@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./images/logo.png" rel="shortcut icon" type="image/x-icon">
+    <!--inserindo imagem na "aba" da página-->
+    <title>Água Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="barrastatus.css">
+    
+</head>
+<body>
+    <div class="header-mob">
+        <header>
+            <div>
+                <img class="logo" src="images/logo.png" alt="logo">
+            </div>
+            <div>
+                <h1>Água Home</h1>
+            </div>
+            <div class="img-home"> 
+                <a href="index.html"><img src="./images/home.png" alt="Imagem que retorna para a página home"></a>
+            </div>
+        </header>
+    </div>
+    
+    <div class="container-usuario">
+
+        <div class="caixa-escolha">
+
+            <div class="Bem-vindo">
+                <h1>Bem-vindo(a)!! <br>
+                    "Nome do usuário." 
+                </h1>            
+            </div>
+
+            <div class="caixa-escolha-button">
+                <a href="usuario-notificacao.html">
+                    <button class="escolha-button-not1">NOTIFICAÇÕES</button>
+                </a>
+
+                <a href="usuario-reportar.html">
+                    <button class="escolha-button-not">REPORTAR</button>
+                </a>
+
+                <a href="usuario-editar.html">
+                    <button class="escolha-button-not1">EDITAR PERFIL</button>
+                </a>
+
+                <BUtton class="deletar-button">DELETAR CADASTRO</BUtton>
+
+            </div>
+        </div> 
+
+        
+        <div class="caixa-mensagem">
+            <div class="container-reportar">
+                <div class="form">
+                    <form action="#">
+                        <div class="form-titulo">
+                            <h1>Gostaria de Reportar algum problema no fornecimento de Água ?</h1>
+                        </div>
+        
+                        <div class="input-group">
+                            <div class="input-box">
+                                <label for="cep">CEP</label><br>
+                                <input id="cep" type="text" name="cep" maxlength="9" onkeyup="handleZipCode(event)" placeholder="   _ _ _ _ _ - _ _ _" required>
+                            </div>
+        
+                            <div class="input-box">
+                                <label for="rua">Rua</label><br>
+                                <input id="rua" type="text" name="rua" maxlength="20">
+                            </div>
+        
+                            <div class="input-box">
+                                <label for="numero">Número</label><br>
+                                <input id="numero" type="text" name="rua" maxlength="9">
+                            </div>
+        
+                            <div id="uploadContainer">
+                                <label for="fileUploader">
+                                    <img class="upload-img" src="images/camera.png" alt="camera" id="cameraIcon">
+                                </label>
+                                <input type="file" id="fileUploader" accept="image/*" style="display: none;">
+                                <img src="" alt="Preview" id="imagePreview" height="100" width="100" style="display: none;">
+                            </div>
+                            <div class="button-enviar">
+                                <button class="button-enviar">ENVIAR</button>   
+                            </div>  
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>  
+    </div>
+
+<div class="footer-mob">
+    <footer>
+        <div class="img-footer">
+            <img class="logo" src="images/logo2.png" alt="logo">
+        </div>
+        <div class="texto-footer">
+            <p>Avenida Paulista - Bela Vista, São Paulo - SP</p>
+            <p>aguahome@aguahome.com.br</p>
+            <p>(11) 91111-1111</p>
+        </div>
+        <div class="redes-footer">
+        <a href="#"><img src="./images/facebook.png" alt="Imagem do facebook"></a>
+        <a href="#"><img src="./images/instagram.png" alt="Imagem do instagram"></a>
+        </div>
+    </footer>
+</div>
+
+    <script src="app.js"></script>
+    
+</body>
+</html>
