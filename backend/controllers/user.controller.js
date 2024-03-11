@@ -1,6 +1,5 @@
 const User = require('../models/user.model');
 
-
 /*
 ler todos os usuários
 */
@@ -80,4 +79,10 @@ const deleteUsuario = async (req, res) => {
     }
 }
 
-module.exports = {getUsuarios, getUsuario, postUsuario, putUsuario, deleteUsuario};
+module.exports = {
+    getUsuarios, 
+    getUsuario, 
+    postUsuario, 
+    putUsuario, 
+    deleteUsuario
+};
