@@ -318,6 +318,10 @@ section img {
     width: 250px;
     border-radius: 20px;
 }
+
+.container-bt button{
+    margin-left: 33%;
+}
     
 }
 
