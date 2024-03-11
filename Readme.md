@@ -26,7 +26,7 @@
 Bem-vindo ao Água Home, a plataforma onde você pode por meio de um breve cadastro ter acesso às informações referentes ao abastecimento de água na sua região,
 com isso estando sempre por dentro para não ser pego desprevenido em caso de problemas com abastecimento. Com isso dito vamos explorar mais algumas das funcionalidades desta plataforma.
 
-![Landing Page](./images/Readme%20-%20Landing%20Page.png)
+![Landing Page](./public/images/Readme%20-%20Landing%20Page.png)
 
 ## Tela de Login
 
