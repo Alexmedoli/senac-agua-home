@@ -114,12 +114,22 @@ Recuperar senha
 const putRecsenha = async (req, res) => {
 
     try {
-        const { id } = req.params;
 
-        const user = await User.findByIdAndUpdate(id, req.body);
-        if (!user) {
+        
+        const user = await User.findByNum(id, req.body /*procura por telefone invés disso {telefoneNumero: req.body.numeroTelefone}*/);
+        //vamo começar testando pra ver se as senhas envidas são idênticas,
+        // mais ou menos 
+        //if (newSenha1 != newSenha2){ fala pro usuário que deu ruim}
+   
+        // se você não tá enviando o :id na rota, como você vai pegar ele aqui?
+        //const { id } = req.params;
+        // se o que está sendo enviado é o número, então você tem que pesquisar a database com ....
+
+         if (!user) {
             return response.status(404).json({message:"Usuário não encontrado"});
         }
+        // se passar desse if, é pq o usuário existe
+        // se ele existe, tu transforma o req.body.newSenha1 como o novo valor de user.senha
 
         const usuarioAtualizado = await User.findById(id);
         res.status(200).json(usuarioAtualizado);
