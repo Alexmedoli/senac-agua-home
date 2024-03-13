@@ -10,4 +10,5 @@ router.post('/cadastro', postUsuario);
 router.put('/:id', putUsuario);
 router.delete('/:id', deleteUsuario);
 
+
 module.exports = router;
