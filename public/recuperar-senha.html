@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +11,7 @@
     <title>Água Home</title>
 </head>
 <body>
+<script src="components.js"></script>
     <div class="header-mob">
         <header>
             <div>
@@ -20,39 +21,41 @@
                 <h1>Água Home</h1>
             </div>
             <div class="img-home"> 
-                <a href="index.html"><img src="./images/home.png" alt="Imagem que retorna para a página home"></a>
+                <a href="/index.html"><img src="./images/home.png" alt="Imagem que retorna para a página home"></a>
             </div>
         </header>
     </div>
 
     <div class="container-recu">
         <div class="form">
-            <form action="#">
+            <form id="formRec" action="#">
                 <div class="form-titulo-login">
                     <h1>RECUPERAR DE SENHA</h1>
                 </div>
                 
                 <div class="input-group">
                     <div class="input-box">
-                        <label for="codigo">SENHA*</label><br>
-                        <input id="codigo" type="tel" name="celular" required>
+                        <label for="celular">CELULAR*</label><br>
+                        <input id="numeroTelefone" type="tel" name="numeroTelefone" maxlength="14" placeholder="   (_ _) _ _ _ _ _ - _ _ _ _ " required>
                     </div>
 
                     <div class="input-box">
                         <label for="codigo">NOVA SENHA*</label><br>
-                        <input id="codigo" type="tel" name="celular" required>
+                        <input id="senha" type="password" name="senha" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="codigo">REPITA A SENHA*</label><br>
+                        <input id="senha1" type="password" name="senha1" required>
+                        <p id="Erro"></p>
                     </div>
                     <div>
-                        <button class="button-salvar-recuperar">SALVAR</button>   
+                        <button class="button-salvar-recuperar" type="submit" onclick="validarSenha('senha', 'senha1')">SALVAR</button>   
                     </div> 
                 </div>
             </form>
         </div>
     </div>
-
-
-
-
 
     <div class="footer-mob">
         <footer>

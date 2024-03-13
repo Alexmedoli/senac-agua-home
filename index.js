@@ -33,7 +33,8 @@ app.get('/', (req, res) => {
 //------------------------------------//
 //       Teste base de dados          //
 //------------------------------------//
-mongoose.connect("mongodb+srv://admin:FjczmzCQB63R75r2@aguahomedb.kdhrj86.mongodb.net/Node-API?retryWrites=true&w=majority&appName=aguaHomeDb")
+
+mongoose.connect("mongodb+srv://admin:FjczmzCQB63R75r2@aguahomedb.kdhrj86.mongodb.net/?retryWrites=true&w=majority&appName=aguaHomeDb")
 .then(() => {
     console.log("Conectado à base de dados do agua home");
     app.listen(3000, () => {

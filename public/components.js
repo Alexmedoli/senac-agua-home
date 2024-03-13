@@ -29,3 +29,18 @@ function openTab(tabIndex) {
     navbarItems.style.display === "none" ? navbarItems.style.display = "flex" : navbarItems.style.display = "none";
   }
 
+  function validarSenha(valor1, valor2)
+{
+    var senha1 = document.getElementById(valor1).value;
+    var senha2 = document.getElementById(valor2).value;
+    var error = document.getElementById('Erro');
+		
+    if (senha1 == senha2)
+    {
+        document.getElementById('formRec').action = '/api/usuarios/recuperar';
+    }
+    else
+    {
+      error.innerHTML = 'Senhas diferentes';
+    }
+}

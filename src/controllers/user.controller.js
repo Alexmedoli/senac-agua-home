@@ -106,11 +106,37 @@ const deleteUsuario = async (req, res) => {
     }
 }
 
+
+
+/*
+Recuperar senha
+*/
+const putRecsenha = async (req, res) => {
+
+    try {
+        const { id } = req.params;
+
+        const user = await User.findByIdAndUpdate(id, req.body);
+        if (!user) {
+            return response.status(404).json({message:"Usuário não encontrado"});
+        }
+
+        const usuarioAtualizado = await User.findById(id);
+        res.status(200).json(usuarioAtualizado);
+
+
+    } catch (error) {
+        res.status(500).json({message:error.message});
+    }
+}
+
+
 module.exports = {
     getUsuarios, 
     getUsuario, 
     login,
     postUsuario, 
     putUsuario, 
-    deleteUsuario
+    deleteUsuario,
+    putRecsenha
 };
