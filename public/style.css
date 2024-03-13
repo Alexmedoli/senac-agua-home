@@ -417,6 +417,11 @@ section img {
     border-radius: 20px;
 }
 
+<<<<<<< HEAD:style.css
+.container-bt button{
+    margin-left: 33%;
+}
+=======
 .container-usuario {
     width: 600px;
     height: 1200px;
@@ -458,6 +463,7 @@ section img {
     width: 90px;
 }
 
+>>>>>>> e4f4918b40c05710b43847868f660ffc7f08e613:public/style.css
     
 }
 
