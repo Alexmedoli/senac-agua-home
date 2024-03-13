@@ -65,15 +65,37 @@ Aqui nos vemos todas as funcionalidades da plataforma após a ação de login, n
 
  ![Telas do Usuário](./public/images/Readme%20-%20Paginas%20do%20usuario.png)
 
-## Instruções de Execução
+## Instruções de Instalação e Execução
 
 Os scripts estão dispostos no arquivo:
-backend/package.json
+`backend/package.json`
 
-Para executar uma versão local do projeto utilize: 
-npm run serve
+Para instalar todos os pacotes utilizados neste projeto utilize:
+`npm install`
+
+Com isso, você configurará seu ambiente com as seguintes bibliotecas e frameworks:
+Runtime:
+- Node.Js
+
+SGBD:
+- Mongoose
+- MongoDb
+
+ Framework web:
+- Express.js
+
+Bibliotecas secundárias incluem:
+- Nodemon
+- Bcrypt
+
+Para executar uma versão local do projeto para desenvolvimento: 
+`npm run dev`
 
 O projeto será executado na porta 3000. 
+
+Para servir o projeto na web, utilize:
+`npm run serve`
+
 
 
  
