@@ -73,12 +73,12 @@ const login = async (req, res) => {
         if (!user) {
             return res.status(400).send('Usuário não encontrado');
         }
-        
+
         if (await bcrypt.compare(req.body.senha, user.senha)){
-            res.redirect('../../public/usuario-notificacao.html')
+            res.redirect(`../../public/usuario-notificacao.html?userID=${user._id}`);
 
         } else{
-            res.send('Usuário ou senha incorretos, tente novamente!')
+            res.send('Usuário ou senha incorretos, tente novamente!');
         }
     } catch (error) {
         res.status(500).json({message:error.message});

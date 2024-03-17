@@ -30,6 +30,8 @@ const getReport = async (req,res) => {
 Criar report
 */
 const postReport = async (req,res) =>{
+    const report = await Report.create(req.body);
+    
     try {
         const report = await Report.create(req.body);
         res.status(200).json(report);

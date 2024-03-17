@@ -1,7 +1,20 @@
 const mongoose = require("mongoose");
 
+
 const reportSchema = mongoose.Schema(
     {
+        idUsuario: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'User',
+            required: true,
+        },
+
+        formaRecebimento: {
+            type: String,
+            ref: 'User.formaRecebimento',
+            required: false
+        },
+        
         endereçoReport: {
             type: {
                 cep:{
@@ -31,7 +44,7 @@ const reportSchema = mongoose.Schema(
     }
 );
 
-const Report = mongoose.model("report", reportSchema)
+const Report = mongoose.model("Report", reportSchema)
 
 module.exports = Report;
 

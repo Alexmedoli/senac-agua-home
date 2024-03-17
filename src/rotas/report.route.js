@@ -5,7 +5,7 @@ const { getReports, getReport, postReport, putReport, deleteReport } = require("
 
 router.get('/', getReports);
 router.get('/:id', getReport);
-router.post('/', postReport);
+router.post('/reportar', postReport);
 router.put('/:id', putReport);
 router.delete('/:id', deleteReport);
 
