@@ -342,20 +342,12 @@ footer {
     text-align: center;
   }
 
-  .escolha-button-not{
-    display: flex;
-    background-color: rgba(43, 100, 227, 1);
-    color: white;
-    border-radius: 15px;
-    height: 50px;
-    width: 120px;
-    cursor: pointer;
-    padding: 5px;
-    justify-content: center;
-    align-items: center;
+  .active{
+    background-color: rgba(43, 100, 227, 1) !important;
+    color: white !important;
   }
 
-  .escolha-button-not1{
+  .escolha-button-not{
     display: flex;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
@@ -417,11 +409,12 @@ section img {
     border-radius: 20px;
 }
 
-<<<<<<< HEAD:style.css
+
 .container-bt button{
     margin-left: 33%;
 }
-=======
+
+
 .container-usuario {
     width: 600px;
     height: 1200px;
@@ -463,8 +456,6 @@ section img {
     width: 90px;
 }
 
->>>>>>> e4f4918b40c05710b43847868f660ffc7f08e613:public/style.css
-    
 }
 
 @media only screen and (max-width:750px) {
@@ -566,16 +557,8 @@ header button {
     padding: 20px;
     width: 400px;
   }
-
-  .caixa-escolha-button button{
-
-    font-size: 8px;
-  }
-
-  .escolha-button-not{
-    height: 30px;
-    width: 80px;
-  }
+  
+  
 
   .escolha-button-not1{
     height: 30px;
@@ -586,5 +569,7 @@ header button {
     height: 30px;
     width: 80px;
 }
+
+
 
 }  

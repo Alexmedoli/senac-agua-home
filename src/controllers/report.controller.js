@@ -1,4 +1,5 @@
 const Report = require('../models/report.model');
+const User = require('../models/user.model');
 
 // Ler todos os reports
 
@@ -33,12 +34,29 @@ const postReport = async (req,res) =>{
     const report = await Report.create(req.body);
     
     try {
-        const report = await Report.create(req.body);
-        res.status(200).json(report);
+
+        if (!req.session.user) {
+            return res.status(401).json({ message: 'Usuário não autenticado' });
+        }
+
+        const user = await User.findById(req.session.user._id);
+
+        if (!user) {
+            return res.status(404).json({ message: 'Usuário não encontrado' });
+        }
+
+        const report = await Report.create({...req.body, user: user._id })
+        
+
+        res.redirect('../../public/dashboard.html?success=true');
+
+
     } catch (error) {
-        res.status(500).json({message:error.message});
-    }
+        console.error('Erro ao enviar report: ', error.message);
+        res.status(500).json({message: error.message})
+        }
 }
+
 
 /*
 Atualizar report
@@ -72,7 +90,7 @@ const deleteReport = async (req, res) => {
         }
 
         res.status(200).json({message: "O report foi deletado com sucesso"});
-
+        
     } catch (error) {
         res.status(500).json({message:error.message});
     }

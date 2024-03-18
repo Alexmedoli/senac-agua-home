@@ -1,36 +1,35 @@
 const mongoose = require("mongoose");
-
+const User = require('../models/user.model');
 
 const reportSchema = mongoose.Schema(
     {
         idUsuario: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User',
-            required: true,
+            required: false,
         },
 
         formaRecebimento: {
             type: String,
-            ref: 'User.formaRecebimento',
             required: false
         },
         
         endereçoReport: {
             type: {
                 cep:{
-                    type: Number,
-                    required: true,
+                    type: String,
+                    required: false,
                 },
                 rua:{
                     type: String,
                     required: false,
                 },
                 numeroResidencial: {
-                    type: Number,
+                    type: String,
                     required: false,
                 },
             },
-            required: true,
+            required: false,
         },
             
         imagemReport:{

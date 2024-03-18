@@ -11,6 +11,7 @@
     <title>Água Home</title>
 </head>
 <body>
+    <script src="components.js"></script>
     <div class="header-mob">
         <header>
             <div>
@@ -35,17 +36,17 @@
                 <div class="input-group">
                     <div class="input-box">
                         <label for="cep">CEP</label><br>
-                        <input id="cep" type="text" name="cep" maxlength="9" onkeyup="handleZipCode(event)" placeholder="   _ _ _ _ _ - _ _ _" required>
+                        <input id="cep" type="text" name="endereço.cep" maxlength="9" onkeyup="handleZipCode(event)" placeholder="_ _ _ _ _ - _ _ _" required>
                     </div>
 
                     <div class="input-box">
                         <label for="rua">Rua</label><br>
-                        <input id="rua" type="text" name="rua" maxlength="20">
+                        <input id="rua" type="text" name="endereço.rua" maxlength="20">
                     </div>
 
                     <div class="input-box">
                         <label for="numero">Número</label><br>
-                        <input id="numero" type="text" name="rua" maxlength="9">
+                        <input id="numero" type="text" name="endereço.rua" maxlength="9">
                     </div>
 
                     <div id="uploadContainer">
@@ -53,10 +54,10 @@
                             <img class="upload-img" src="images/camera.png" alt="camera" id="cameraIcon">
                         </label>
                         <input type="file" id="fileUploader" accept="image/*" style="display: none;">
-                        <img src="" alt="Preview" id="imagePreview" height="100" width="100" style="display: none;">
+                        <img src="" name = "imagemReport" alt="Preview" id="imagePreview" height="100" width="100" style="display: none;">
                     </div>
                     <div class="button-enviar">
-                        <button class="button-enviar">ENVIAR</button>   
+                        <button class="button-enviar" type="submit" onclick="açaoExecutada('REPORT')">ENVIAR</button>   
                     </div>  
                 </div>
             </div>

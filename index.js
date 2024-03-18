@@ -1,7 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const User = require('./src/models/user.model.js');
-const Report = require('./src/models/report.model.js');
+const session = require('express-session');
 const userRoute = require('./src/rotas/user.routes.js');
 const reportRoute = require('./src/rotas/report.route.js');
 const path = require ('path');
@@ -15,6 +14,12 @@ app.use(express.static(__dirname)),
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+app.use(session({
+    secret: 'SECRET_KEY', // SECRET KEY
+    resave: false,
+    saveUninitialized: true
+}));
+
 //------------------------------------//
 //             ROTAS                  //
 //------------------------------------//
@@ -27,7 +32,6 @@ app.use("/api/reports", reportRoute)
 //------------------------------------//
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname,'index.html'))
-    res.send("Servidor em execução")
 })
 
 //------------------------------------//

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
     <!--inserindo imagem na "aba" da página-->
     <title>Água Home</title>
 </head>
+
 <body>
     <div class="header-mob">
         <header>
@@ -19,40 +21,35 @@
             <div>
                 <h1>Água Home</h1>
             </div>
-            <div class="img-home"> 
-                <a href="index.html"><img src="./images/home.png" alt="Imagem que retorna para a página home"></a>
+            <div class="img-home">
+                <a href="../index.html"><img src="./images/home.png" alt="Imagem que retorna para a página home"></a>
             </div>
         </header>
     </div>
 
     <div class="container-recu">
         <div class="form">
-            <form action="#">
+            <form action='/api/usuarios/recuperar-senha' method="post">
                 <div class="form-titulo-login">
                     <h1>RECUPERAR DE SENHA</h1>
                 </div>
                 
                 <div class="input-group">
                     <div class="input-box">
-                        <label for="codigo">SENHA*</label><br>
-                        <input id="codigo" type="tel" name="celular" required>
+                        <label for="celular">EMAIL*</label><br>
+                        <input id="numeroTelefone" type="email" name="email" placeholder="aguahome@email.com" required>
                     </div>
-
                     <div class="input-box">
-                        <label for="codigo">NOVA SENHA*</label><br>
-                        <input id="codigo" type="tel" name="celular" required>
+                        <label for="codigo">SENHA*</label><br>
+                        <input id="senha" type="password" name="senha" required>
                     </div>
                     <div>
-                        <button class="button-salvar-recuperar">SALVAR</button>   
+                        <button class="button-salvar-recuperar" type="submit">SALVAR</button>   
                     </div> 
                 </div>
             </form>
         </div>
     </div>
-
-
-
-
 
     <div class="footer-mob">
         <footer>
@@ -65,11 +62,11 @@
                 <p>(11) 91111-1111</p>
             </div>
             <div class="redes-footer">
-            <a href="#"><img src="./images/facebook.png" alt="Imagem do facebook"></a>
-            <a href="#"><img src="./images/instagram.png" alt="Imagem do instagram"></a>
+                <a href="#"><img src="./images/facebook.png" alt="Imagem do facebook"></a>
+                <a href="#"><img src="./images/instagram.png" alt="Imagem do instagram"></a>
             </div>
         </footer>
     </div>
-    
 </body>
+
 </html>

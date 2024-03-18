@@ -1,5 +1,6 @@
 const User = require('../models/user.model');
 const bcrypt = require('bcrypt');
+const session = require('express-session');
 
 /*
 ler todos os usuários
@@ -69,13 +70,16 @@ Logar usuário
 */
 const login = async (req, res) => {
     try {
-        const user = await User.findOne({nome: req.body.nome});
+        const user = await User.findOne({email: req.body.email});
         if (!user) {
             return res.status(400).send('Usuário não encontrado');
         }
 
         if (await bcrypt.compare(req.body.senha, user.senha)){
-            res.redirect(`../../public/usuario-notificacao.html?userID=${user._id}`);
+
+            // salvando dado de usuário em sessão
+            req.session.user = user;
+            res.redirect('../../public/dashboard.html')
 
         } else{
             res.send('Usuário ou senha incorretos, tente novamente!');
@@ -83,6 +87,21 @@ const login = async (req, res) => {
     } catch (error) {
         res.status(500).json({message:error.message});
     }
+}
+
+
+/*
+Deletar sessão
+*/
+const logout = async(req,res) => {
+    req.session.destroy((err) => {
+        if (err) {
+            return res.status(500).json({ message: 'Erro ao encerrar a sessão' });
+        }
+
+        // manda pra pg de login
+        res.redirect('../../public/login.html`'); 
+    });
 }
 
 
@@ -106,11 +125,36 @@ const deleteUsuario = async (req, res) => {
     }
 }
 
+/*
+Alterar Senha do Usuário
+*/
+async function recuperarSenha(req, res) {
+    const { email, senha } = req.body;
+
+    try {
+        const user = await User.findOne({ email });
+
+        if (!user) {
+            return res.status(404).json({ message: "Usuário não encontrado" });
+        }
+
+        // Update user's password
+        user.senha = senha;
+        await user.save();
+
+        return res.status(200).json({ message: "Senha recuperada com sucesso" });
+    } catch (error) {
+        return res.status(500).json({ message: "Erro ao recuperar senha", error });
+    }
+}
+
 module.exports = {
     getUsuarios, 
     getUsuario, 
     login,
+    logout,
     postUsuario, 
     putUsuario, 
-    deleteUsuario
+    deleteUsuario,
+    recuperarSenha
 };

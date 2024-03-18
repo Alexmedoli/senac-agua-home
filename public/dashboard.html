@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./images/logo.png" rel="shortcut icon" type="image/x-icon">
+    <!--inserindo imagem na "aba" da página-->
+    <title>Água Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="barrastatus.css">
+    <script>
+        // Load the "notificações" component by default when the page loads
+        window.addEventListener('load', function() {
+            loadComponent('NOTIFICAÇÕES');
+        });
+
+        window.addEventListener('load', function() {
+            document.getElementById('standard-button').classList.add('active');
+        })
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const successParam = urlParams.get('success');
+        
+        if (successParam === 'true') {
+            alert('Report criado com sucesso!')
+        };
+    </script>
+
+</head>
+
+<body>
+    <div class="header-mob">
+        <header>
+            <div>
+                <img class="logo" src="images/logo.png" alt="logo">
+            </div>
+            <div>
+                <h1>Água Home</h1>
+            </div>
+            <div class="img-home">
+                <a href="../index.html"><img src="./images/home.png" alt="Imagem que retorna para a página home"></a>
+            </div>
+        </header>
+    </div>
+
+    <div class="container-usuario">
+
+        <div class="caixa-escolha">
+
+            <div class="Bem-vindo">
+                <h1>Bem-vindo(a)!! <br>
+                    "Nome do usuário."
+                </h1>
+            </div>
+
+            <div class="caixa-escolha-button">
+
+                <button type="button" id= "standard-button" class="escolha-button-not" onclick="loadComponent('NOTIFICAÇÕES', this)">NOTIFICAÇÕES</button>
+                <button type="button" class="escolha-button-not" onclick="loadComponent('REPORTAR', this)">REPORTAR</button>
+                <button type="button" class="escolha-button-not" onclick="loadComponent('EDITAR', this)">EDITAR PERFIL</button>
+                <button type="button" class="deletar-button" onclick="window.location.href = 'login.html';">LOGOUT</button>
+
+            </div>
+        </div>
+
+
+        <div class="caixa-mensagem" id="caixa-mensagem">
+            <!--carregamento dinâmico-->>
+        </div>
+    </div>
+
+    <div class="footer-mob">
+        <footer>
+            <div class="img-footer">
+                <img class="logo" src="images/logo2.png" alt="logo">
+            </div>
+            <div class="texto-footer">
+                <p>Avenida Paulista - Bela Vista, São Paulo - SP</p>
+                <p>aguahome@aguahome.com.br</p>
+                <p>(11) 91111-1111</p>
+            </div>
+            <div class="redes-footer">
+                <a href="#"><img src="./images/facebook.png" alt="Imagem do facebook"></a>
+                <a href="#"><img src="./images/instagram.png" alt="Imagem do instagram"></a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="components.js"></script>
+
+</body>
+
+</html>

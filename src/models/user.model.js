@@ -4,18 +4,24 @@ const userSchema = mongoose.Schema(
     {
         nome: {
             type: String,
-            required: true,
+            required: false,
+        },
+
+        email: {
+            type: String,
+            required: false,
+            lowercase: true,
         },
 
         numeroTelefone: {
             type: Number,
-            required: true,
+            required: false,
             default: 0,
         },
 
         senha:{
             type: String,
-            required: true,
+            required: false,
         },
 
         endereço: {
@@ -40,8 +46,8 @@ const userSchema = mongoose.Schema(
 
         formaRecebimento: {
             type: String,
-            enum: ["sms", "whatsapp", "telegram"],
-            required: true,
+            enum: ["mensagem", "whatsapp", "telegram"],
+            required: false,
         }
     }
 );
