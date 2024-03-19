@@ -1,5 +1,5 @@
 # **Projeto Integrador Grupo 05**
-
+![video github](https://github.com/Alexmedoli/senac-agua-home/assets/54639863/d040f206-24ce-4e53-b8e5-130b1a315253)
 # Água Home
 
 ## Integrantes do Grupo
@@ -19,6 +19,7 @@
 * Tela para reportar
 * Tela de Status
 * Telas de Usuário
+
 
 
 ## Tela Inicial/Landing Page
